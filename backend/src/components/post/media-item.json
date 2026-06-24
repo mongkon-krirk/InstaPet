@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_post_media_items",
+  "info": {
+    "displayName": "Media Item",
+    "description": "A single image in a post carousel"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 9
+    },
+    "altText": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    }
+  }
+}

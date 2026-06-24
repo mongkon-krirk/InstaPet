@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_medias",
+  "info": {
+    "singularName": "app-media",
+    "pluralName": "app-medias",
+    "displayName": "App Media"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": { "visible": false },
+    "content-type-builder": { "visible": false }
+  },
+  "attributes": {}
+}

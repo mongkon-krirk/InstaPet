@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_media_owners",
+  "info": {
+    "singularName": "app-media-owner",
+    "pluralName": "app-media-owners",
+    "displayName": "App Media Owner"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "uploadFile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::upload.file",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "required": true
+    },
+    "purpose": {
+      "type": "enumeration",
+      "enum": ["post", "avatar"],
+      "required": true
+    },
+    "usageStatus": {
+      "type": "enumeration",
+      "enum": ["uploaded", "attached", "unused"],
+      "default": "uploaded",
+      "required": true
+    },
+    "appReference": {
+      "type": "string"
+    }
+  }
+}

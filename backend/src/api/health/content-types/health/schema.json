@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "health_checks",
+  "info": {
+    "singularName": "health",
+    "pluralName": "healths",
+    "displayName": "Health"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": { "visible": false },
+    "content-type-builder": { "visible": false }
+  },
+  "attributes": {}
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "required": true
+    },
+    "caption": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "mediaItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "post.media-item",
+      "required": true,
+      "min": 1,
+      "max": 10
+    },
+    "visibility": {
+      "type": "enumeration",
+      "enum": ["public", "followers"],
+      "default": "public",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["published", "deleted", "hidden"],
+      "default": "published",
+      "required": true
+    },
+    "likesCount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "publishedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "deletedAt": {
+      "type": "datetime"
+    }
+  }
+}
